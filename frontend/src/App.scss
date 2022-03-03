@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  pointer-events: none;
+  width: 90px;
+  height: auto;
+  padding: 20px;
+}
+
+*{
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.section{
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  margin: 0 auto;
+  max-width: fit-content;
+
+  .sidebar{
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-container{
+    display: flex;
+    align-items: start;
+    gap: 80px;
+
+    .main-list{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    
+      .actions{
+        display: flex;
+        gap:10px;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 0;
+        align-self: baseline;
+      }
+      .items-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* justify-content: center; */
+        align-items: self-start;
+        max-width: 880px;
+        flex-wrap: wrap;
+    
+        &.grid{
+          flex-direction: row;
+        }
+    
+        .item-actions{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 10px;
+        }
+    
+        .item-container{
+          display: flex;
+          width: 400px;
+          height: auto;
+          background: black;
+          color: aliceblue;
+          flex-direction: column;
+          gap: 10px;
+          padding: 10px;
+          border-radius: 10px;
+    
+          .item{
+            display:flex;
+            gap:10px;
+            justify-content: center;
+            align-items: center;
+            .item-img{
+              width: 80px;
+              height: 100px;
+            }
+            
+            .item-details{
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              gap: 35px;
+            }
+          }
+        }
+      } 
+    }
+  }
+}
+
+
+
+.section-view-item{
+  max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    .link{
+      background-color: rgb(0, 162, 255);
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
+      font-size: 1.2em;
+      border:1px solid black;
+      text-decoration: none;
+      width: 120px;
+      color: #000; 
+      font-weight: 900;
+    }
+    .item{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      height: 450px;
+      .img{
+        position: absolute;
+        z-index: 0;
+      }
+      span{
+        z-index: 1;
+        font-size: 25px;
+        letter-spacing: 0.15em;
+        font-weight: 900;
+        text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+        text-shadow: 4px 3px 0 #7a7a7a;
+        background: #70707099;
+        padding: 5px 14px;  
+      
+      }
+     
+
+    }
+}
+
+.crypto-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+// .main-content{
+//   display: flex;
+//   flex-direction: column;
+//   gap: 60px;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .items-list{
+//   display:flex;
+//   flex-direction: column;
+//   gap:20px;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+
+.edit-container{
+  display: flex;
+  height: auto;
+  background: black;
+  color: aliceblue;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.items-filter{
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+  align-items: self-start;
+}
+
+.button{
+  background-color: rgb(0, 162, 255);
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-shadow: 0px 1px 0px rgba(255,255,255,.5); /* 50% white from bottom */
+  font-size: 1.2em;
+  border:1px solid black;
+}
+
+.button-view{
+  width: 270px;
+}
+
+.input, select{
+  padding: 12px 2px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.input-edit-title{
+  background-color: #000;
+  border:none;
+  color: #fff;
+  width: auto;
+}
+
+h2{
+  font-size: 22px;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
